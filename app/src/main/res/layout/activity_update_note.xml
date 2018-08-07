@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NoteActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbNoteUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue">
+
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:id="@+id/ivImageUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5" />
+    <TextView
+        android:id="@+id/tvNoteTimeUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="12dp"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"/>
+    <EditText
+        android:id="@+id/etNoteTitleUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="Title"
+        android:textSize="@dimen/dimen18"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"
+        android:textStyle="bold"
+        android:inputType="textMultiLine"
+        />
+    <EditText
+        android:id="@+id/etNoteUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen16"
+        android:hint="Note"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imNoteClockUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/dimen5"
+            android:src="@drawable/clocknote" />
+
+        <TextView
+            android:id="@+id/tvAlarmUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen5"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_toRightOf="@+id/imNoteClockUpdate"
+            android:text="@string/Alarm"
+            android:textSize="@dimen/dimen14" />
+
+        <Spinner
+            android:id="@+id/spinerDateUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_toRightOf="@+id/imNoteClockUpdate"></Spinner>
+
+        <Spinner
+            android:id="@+id/spinerTimeUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_toRightOf="@+id/spinerDateUpdate">
+
+        </Spinner>
+
+        <ImageView
+            android:id="@+id/ivXUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_toRightOf="@id/spinerTimeUpdate"
+            android:src="@drawable/x" />
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorNau"
+            app:menu="@menu/bottom_menu"
+            android:layout_alignParentBottom="true">
+
+        </android.support.design.widget.BottomNavigationView>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

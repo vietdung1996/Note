@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.NoteActivity"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue">
+
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen5"
+        android:layout_marginTop="@dimen/dimen5" />
+    <TextView
+        android:id="@+id/tvNoteTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="12dp"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"/>
+    <EditText
+        android:id="@+id/etNoteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:hint="Title"
+        android:textSize="@dimen/dimen18"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"
+        android:textStyle="bold"
+        android:inputType="textMultiLine"
+        />
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen16"
+        android:hint="Note"
+        android:layout_marginLeft="@dimen/dimen10"
+        android:layout_marginRight="@dimen/dimen10"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/imNoteClock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clocknote"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/tvAlarm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/dimen14"
+            android:layout_toRightOf="@+id/imNoteClock"
+            android:layout_marginTop="@dimen/dimen5"
+            android:layout_marginLeft="@dimen/dimen5"
+            android:text="@string/Alarm"/>
+        <Spinner
+            android:id="@+id/etDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imNoteClock"
+            android:layout_marginTop="@dimen/dimen5">
+        </Spinner>
+        <Spinner
+            android:id="@+id/etTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/etDate"
+            android:layout_marginTop="@dimen/dimen5">
+
+        </Spinner>
+        <ImageView
+            android:id="@+id/ivX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/etTime"
+            android:src="@drawable/x"
+            android:layout_marginTop="@dimen/dimen5"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

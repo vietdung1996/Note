@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    />
+    <item
+        android:id="@+id/mnBack"
+        android:title="@string/Back"
+        android:icon="@drawable/back"
+        app:showAsAction="always"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/mnShare"
+        android:title="@string/Share"
+        android:icon="@drawable/share"
+        app:showAsAction="always"
+        android:enabled="true"
+        />
+    <item
+        android:id="@+id/mnDelete"
+        android:title="@string/Delete"
+        android:icon="@drawable/delete"
+        app:showAsAction="always"
+        android:enabled="true"
+        />
+
+        />
+    <item
+        android:id="@+id/mnNext"
+        android:title="@string/Next"
+        android:icon="@drawable/next"
+        app:showAsAction="always"
+        android:enabled="true"/>
+
+
+</menu>

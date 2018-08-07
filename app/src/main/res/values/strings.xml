@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Note</string>
+    <string name="mnAdd">Add</string>
+    <string name="save">Save</string>
+    <string name="choose">Choose</string>
+    <string name="camera">Camera</string>
+    <string name="insertPicture">Insert Picture</string>
+    <string name="takephoto">Take Photo</string>
+    <string name="ChoosePhoto">Choose Photo</string>
+    <string name="Alarm">Alarm</string>
+    <string name="Next">Next</string>
+    <string name="Back">Back</string>
+    <string name="Delete">Delete</string>
+    <string name="Share">Share</string>
+    <string name="newnote">New note</string>
+</resources>

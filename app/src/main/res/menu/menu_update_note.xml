@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mnCameraUpdate"
+        android:icon="@drawable/camera"
+        android:orderInCategory="100"
+        android:title="@string/camera"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mnChooseUpdate"
+        android:title="@string/choose"
+        android:icon="@drawable/choose"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+    <item
+        android:title="@string/save"
+        android:icon="@drawable/yes"
+        android:id="@+id/mnSaveUpdate"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/mnNewNote"
+        android:title="@string/newnote"/>
+
+</menu>
