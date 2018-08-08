@@ -115,7 +115,7 @@ public class UpdateNoteActivity extends AppCompatActivity {
             iv_Image.setImageURI(Uri.parse(uri));
             Log.d("uri", "getData: " + uri);
             setImage();
-            loadData();
+
         }
     }
 
@@ -195,25 +195,21 @@ public class UpdateNoteActivity extends AppCompatActivity {
                 String seletedItem = adapterView.getItemAtPosition(i).toString();
                 if (seletedItem.equals("09:00")) {
                     time = "09:00";
-                    Log.d("9time", time);
+
                     String other = adapterView.getItemAtPosition(4).toString();
                     setOther(other);
 
                 } else if (seletedItem.equals("13:00")) {
                     time = "13:00";
-                    Log.d("13time", time);
                     String other = adapterView.getItemAtPosition(4).toString();
                     setOther(other);
 
                 } else if (seletedItem.equals("17:00")) {
                     time = "17:00";
-                    Log.d("17time", time);
                     String other = adapterView.getItemAtPosition(4).toString();
                     setOther(other);
-
                 } else if (seletedItem.equals("20:00")) {
                     time = "20:00";
-                    Log.d("20time", time);
                     String other = adapterView.getItemAtPosition(4).toString();
                     setOther(other);
                 }else if (seletedItem.equals("Other...")) {
@@ -376,6 +372,14 @@ public class UpdateNoteActivity extends AppCompatActivity {
     private void setToolbar() {
         setSupportActionBar(tb_Note);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        tb_Note.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+            }
+        });
     }
 
     @Override
@@ -413,13 +417,11 @@ public class UpdateNoteActivity extends AppCompatActivity {
                         calendar.set(Calendar.DAY_OF_MONTH, day);
                         calendar.set(Calendar.HOUR_OF_DAY, hour);
                         calendar.set(Calendar.MINUTE, minute);
-                        // Cancel pending intent
+
                         Intent intenta = new Intent(NoteActivity.getAppContext(), AlarmReceiver.class);
                         pendingIntent = PendingIntent.getBroadcast(NoteActivity.getAppContext(), id, intenta, PendingIntent.FLAG_UPDATE_CURRENT);
                         alarmManager.cancel(pendingIntent);
-                        //pendingIntent.cancel();
 
-                        // Create new pending intent
                         intenta = new Intent(UpdateNoteActivity.this, AlarmReceiver.class);
                         intenta.putExtra(NoteActivity.Request_Code_Intent,id);
                         pendingIntent = PendingIntent.getBroadcast(UpdateNoteActivity.this, id, intenta, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -429,13 +431,15 @@ public class UpdateNoteActivity extends AppCompatActivity {
                     Intent intent = new Intent(UpdateNoteActivity.this, MainActivity.class);
                     startActivity(intent);
 
-
                 }
                 break;
             case R.id.mnChooseUpdate:
                 break;
             case R.id.mnCameraUpdate:
                 showDialogPhoto();
+                break;
+            case R.id.mnNewNote:
+                Intent i = new Intent(UpdateNoteActivity.this,NoteActivity.class);
                 break;
         }
         return super.onOptionsItemSelected(item);

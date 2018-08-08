@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.vietdung.note.R;
 import com.vietdung.note.adapter.NoteAdapter;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private void setToolbar() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+
     }
 
     @Override
